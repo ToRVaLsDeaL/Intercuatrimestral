@@ -6,7 +6,7 @@ let empleadoSchema = new Schema({
         type: String,
         required: [true, 'El nombre del puesto es requerido']
     },
-    anios_servicio:{
+    anios_servicio: {
         type: Number,
         required: [true, 'Los años de servicio son requeridos']
     },
@@ -17,6 +17,19 @@ let empleadoSchema = new Schema({
     hora_salida: {
         type: Number,
         required: [true, 'La hora de salida es obligatoria']
+    },
+    activo: {
+        type: Boolean,
+        default: true
+    },
+    id_usuario:{
+        type: Schema.Types.ObjectId,
+        ref: 'Usuario'
+
+    },
+    id_departamento: {
+        type: Schema.Types.ObjectId,
+        ref: 'Departamento'
     }
 });
 

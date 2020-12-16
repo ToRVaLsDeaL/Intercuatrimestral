@@ -19,7 +19,7 @@ let usuarioSchema = new Schema({
         required: [true, 'La edad es obligatoria']
     },
     curp:{
-        type: Number,
+        type: String,
         required: [true, 'La curp es obligatoria'],
         unique: true
     },
